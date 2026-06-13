@@ -6,7 +6,7 @@
 
    * **Шаг 1. Клонирование репозитория**  
      ```
-     git clone <ССЫЛКА_НА_ВАШ_РЕПОЗИТОРИЙ>
+     git clone https://github.com/ananna84-cmd/Sprint_5.git
      cd SPRINT_5
      ```
      *(переходит в папку проекта)*
