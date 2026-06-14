@@ -30,4 +30,4 @@ class TestConstructorFromPersonalCabinet:
         driver.find_element(*link).click()
         wait.until(expected_conditions.url_contains(main_page))
 
-        assert main_page in driver.current_url
+        assert main_page == driver.current_url

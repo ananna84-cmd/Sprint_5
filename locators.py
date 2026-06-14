@@ -49,15 +49,18 @@ LOGO_LINK = (By.XPATH, "html/body/div/div/header/nav/div/a[@href='/']")
 # Кнопка "Выйти" в личном кабинете (account/profile)
 EXIT_BUTTON = (By.XPATH, "//button[text()='Выход']")
 
-# Раздел булки
-BUNS = (By.XPATH, "//*[@id='root']/div/main/section[1]/div[1]/div[1]/span")
-# Раздел слусы
-SAUCES = (By.XPATH, "//*[@id='root']/div/main/section[1]/div[1]/div[2]/span")
-# Раздел начинки
-TOPPINGS = (By.XPATH, "//*[@id='root']/div/main/section[1]/div[1]/div[3]/span") 
+# Активный раздел
+ACTIVE_TAB = (By.XPATH, "//div[contains(@class, 'tab_tab_type_current')]")
+#parent_element = (By.XPATH, f".//div[contains(@class, 'tab_tab')]")
 
+# Раздел булки
+BUNS = (By.XPATH, "//section[contains(@class, 'BurgerIngredients_ingredients')]//div[contains(@class, 'tab_tab')]//span[text()='Булки']")
+# Раздел слусы
+SAUCES = (By.XPATH, "//section[contains(@class, 'BurgerIngredients_ingredients')]//div[contains(@class, 'tab_tab')]//span[text()='Соусы']")
+# Раздел начинки
+TOPPINGS = (By.XPATH, "//section[contains(@class, 'BurgerIngredients_ingredients')]//div[contains(@class, 'tab_tab')]//span[text()='Начинки']")
 
 # Локаторы для заголовков
-BUNS_HEADER = (By.CSS_SELECTOR, "//*[@id='root']/div/main/section[1]/div[2]/h2[1]")
-SAUCES_HEADER = (By.CSS_SELECTOR, "//*[@id='root']/div/main/section[1]/div[2]/h2[2]")
-TOPPINGS_HEADER = (By.CSS_SELECTOR, "//*[@id='root']/div/main/section[1]/div[2]/h2[3]")
+BUNS_HEADER = (By.XPATH, "//div[contains(@class, 'BurgerIngredients_ingredients')]/h2[contains(text(), 'Булки')]")
+SAUCES_HEADER = (By.XPATH, "//div[contains(@class, 'BurgerIngredients_ingredients')]/h2[contains(text(), 'Соусы')]")
+TOPPINGS_HEADER = (By.XPATH, "//div[contains(@class, 'BurgerIngredients_ingredients')]/h2[contains(text(), 'Начинки')]")

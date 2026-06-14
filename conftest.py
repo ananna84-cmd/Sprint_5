@@ -11,31 +11,6 @@ def driver():
     yield driver
     driver.quit()
 
-# Главная страница
-@pytest.fixture
-def main_page():
-    return "https://stellarburgers.education-services.ru/"
-
-# Страница регистрации
-@pytest.fixture
-def registration_page():
-    return "https://stellarburgers.education-services.ru/register"
-
-# Страница входа
-@pytest.fixture
-def login_page():
-    return "https://stellarburgers.education-services.ru/login"
-
-# Страница профиля
-@pytest.fixture
-def cabinet_page():
-    return "https://stellarburgers.education-services.ru/account/profile"
-
-# Страница восстановления пароля
-@pytest.fixture
-def forgot_password_page():
-    return "https://stellarburgers.education-services.ru/forgot-password"
-
 # Ожидание
 @pytest.fixture
 def wait(driver):
