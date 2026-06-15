@@ -1,5 +1,17 @@
 from .locators import NAME_FIELD, EMAIL_FIELD, PASSWORD_FIELD, ENTER_BUTTON, REGISTER_BUTTON
+import random
 
+# Генирация 3-х случайных цифр и возвращение их в виде строки
+def generate_nums():
+    num_1 = str(random.randint(0, 9))
+    num_2 = str(random.randint(0, 9))
+    num_3 = str(random.randint(0, 9))
+    return num_1 + num_2 + num_3
+
+# Создание пароля заданой длины
+def create_password(password_length = 8):
+    digits = '0123456789'
+    return ''.join(random.choice(digits) for _ in range(password_length))
 
 # Авторизация
 def authorization(driver, email, password):

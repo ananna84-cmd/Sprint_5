@@ -1,19 +1,20 @@
 # Главная страница
-def main_page():
-    return "https://stellarburgers.education-services.ru/"
+MAIN_PAGE ="https://stellarburgers.education-services.ru/"
 
 # Страница регистрации
-def registration_page():
-    return "https://stellarburgers.education-services.ru/register"
+REGISTRATION_PAGE = f"{MAIN_PAGE}register"
 
 # Страница входа
-def login_page():
-    return "https://stellarburgers.education-services.ru/login"
+LOGIN_PAGE = f"{MAIN_PAGE}login"
 
 # Страница профиля
-def cabinet_page():
-    return "https://stellarburgers.education-services.ru/account/profile"
+CABINET_PAGE = f"{MAIN_PAGE}account/profile"
 
 # Страница восстановления пароля
-def forgot_password_page():
-    return "https://stellarburgers.education-services.ru/forgot-password"
+FORGOT_PASSWORD_PAGE = f"{MAIN_PAGE}forgot-password"
+
+# Данные для авторизации
+LOGIN_DATA = {
+    "email" : "anna-26@yandex.ru",
+    "password" : "123456"
+}
